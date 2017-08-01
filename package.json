@@ -1,0 +1,21 @@
+{
+  "name": "cttcm146",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/wdio config/local.js"
+  },
+  "author": "COE <coreddin@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.4.2",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-spec-reporter": "^0.1.0",
+    "webdriverio": "^4.8.0"
+  },
+  "devDependencies": {
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-selenium-standalone-service": "0.0.9"
+  }
+}
