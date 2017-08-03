@@ -17,6 +17,12 @@ categorypage: {
   filterName: '.filter-nav ul > li[class^="filter-"]',
   filterOption: '#pagecontent .left-nav .filter-nav ul li ul li a',
   products: '#gnTemplate #fourUpContainer .pListItem .productName a'
+},
+
+foresee: {
+  browserSP: '#_spovr_browse',
+  setBtn: '#acsSetValues',
+  returnBtn: '#acsReturnToSite'
 }
 
 };

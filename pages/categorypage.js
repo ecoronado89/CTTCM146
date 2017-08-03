@@ -26,9 +26,9 @@ class categoryPage {
 
   selectFilterName() {
     let filterNameSelected = this.filterName.elements('.filter-name');
-
     this.index = this.getRandom(0, filterNameSelected.value.length);
-    this.filterParentName = filterNameSelected.value[this.index].getText();
+    //browser.pause(2000);
+    //this.filterParentName = filterNameSelected.value[this.index].getText();
 
     this.selectFilterOption();
   }

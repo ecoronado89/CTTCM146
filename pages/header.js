@@ -1,5 +1,6 @@
 const menu = require('./selectors').menu;
 const header = require('./selectors').header;
+const foresee = require('./selectors').foresee
 
 class Header {
 
@@ -16,9 +17,26 @@ class Header {
         this.mensLinkLocator = menu.mensLink;
         this.mensShirtLocator =  menu.mensShirt;
 
+        this.browserForesee = foresee.browserSP;
+        this.foreseeSetBtn = foresee.setBtn;
+        this.foresseReturnBtn = foresee.returnBtn;
+
         this.bcArray = [];
 
 
+    }
+
+    //forsee methods
+    get browserForeseeSP() {
+        return browser.element(this.browserForesee);
+    }
+
+    get foresseeSetButton() {
+        return browser.element(this.foreseeSetBtn);
+    }
+
+    get foreseeReturnButton() {
+        return browser.element(this.foresseReturnBtn);
     }
 
     get mensLink() {
@@ -57,6 +75,18 @@ class Header {
         return browser.element(this.loginButtonLocator);
     }
 
+    setForeseeValue() {
+        this.browserForeseeSP.setValue('0');
+    }
+
+    clickForeseeSetBtn() {
+        this.foresseeSetButton.click();
+    }
+
+    clickForeseeReturnBtn() {
+        this.foreseeReturnButton.click();
+    }
+
     clickMensLink() {
       return this.mensLink.click();
     }
@@ -82,6 +112,10 @@ class Header {
            return true;
          }
       }
+    }
+
+    clickBreacCrumb(index) {
+        this.breadcumbList.value[index].click();
     }
 
     isLogoVisible() {
