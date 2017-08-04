@@ -28,7 +28,17 @@ describe('CTTCM-146', () => {
   });
   it('Step#2 - Click Sub2 link in breadcrumb', () => {
     header.clickBreacCrumb(2);
+    //TODO validate returned to Sub2 page -- how??
     //TODO validate Sub2 page title
+    assert(header.compareBreadCrumbs());
+    assert(catPage.isTotalProductsVisible());
+  });
+  it('Step#3 - Select second refinement', () => {
+    catPage.selectFilterName();
+    browser.pause(4000);
+    catPage.selectRandomProduct();
+    browser.pause(4000);
+    header.getBreadcrumbs();
     assert(header.compareBreadCrumbs());
   });
 });

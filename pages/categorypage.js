@@ -6,6 +6,7 @@ class categoryPage {
     this.filterNameLocator = categorypage.filterName;
     this.filterOptionLocator = categorypage.filterOption;
     this.products = categorypage.products;
+    this.total = categorypage.totalProducts;
     let index = 0;
     let indice = 0;
     let filterParentName = '';
@@ -24,12 +25,13 @@ class categoryPage {
     return browser.elements(this.products);
   }
 
+  get totalProducts() {
+    return browser.element(this.total);
+  }
+
   selectFilterName() {
     let filterNameSelected = this.filterName.elements('.filter-name');
     this.index = this.getRandom(0, filterNameSelected.value.length);
-    //browser.pause(2000);
-    //this.filterParentName = filterNameSelected.value[this.index].getText();
-
     this.selectFilterOption();
   }
 
@@ -49,6 +51,10 @@ class categoryPage {
     this.index = this.getRandom(0, this.availableProducts.value.length);
     let option = this.availableProducts.value[0];
     option.click();
+  }
+
+  isTotalProductsVisible() {
+    return this.totalProducts.isVisible();
   }
 
 

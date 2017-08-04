@@ -9,6 +9,7 @@
   "author": "COE <coreddin@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "allure-commandline": "^2.1.1",
     "mocha": "^3.4.2",
     "phantomjs": "^2.1.7",
     "wdio-mocha-framework": "^0.5.10",

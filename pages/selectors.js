@@ -16,7 +16,8 @@ header: {
 categorypage: {
   filterName: '.filter-nav ul > li[class^="filter-"]',
   filterOption: '#pagecontent .left-nav .filter-nav ul li ul li a',
-  products: '#gnTemplate #fourUpContainer .pListItem .productName a'
+  products: '#gnTemplate #fourUpContainer .pListItem .productName a',
+  totalProducts: '.total'
 },
 
 foresee: {

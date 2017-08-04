@@ -104,6 +104,7 @@ class Header {
 
     compareBreadCrumbs() {
       let actualArray = this.breadcumbList.value;
+      console.log(`ARRAY ACTUAL:${this.bcArray}`);
       for(let ind = 0; ind < actualArray.length; ind++) {
          if(this.bcArray[ind] !== actualArray[ind].getText()){
            return false;
