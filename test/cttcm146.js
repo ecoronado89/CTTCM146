@@ -11,7 +11,7 @@ describe('CTTCM-146', () => {
     header.setForeseeValue();
     header.clickForeseeSetBtn();
     header.clickForeseeReturnBtn();
-    browser.pause(4000);   
+    browser.pause(800);   
   })
   it('Pre-conditions', () =>{
     header.clickMensLink();
@@ -22,6 +22,8 @@ describe('CTTCM-146', () => {
     catPage.selectFilterName();
     browser.pause(4000);
     catPage.selectRandomProduct();
+    browser.pause(4000);
+    browser.pause(4000);
     browser.pause(4000);
     header.getBreadcrumbs();
     assert(header.compareBreadCrumbs());
