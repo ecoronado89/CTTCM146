@@ -22,7 +22,7 @@ class categoryPage {
   }
 
   get availableProducts() {
-    return browser.elements(this.products);
+ 
   }
 
   get totalProducts() {
