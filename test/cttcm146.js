@@ -10,8 +10,7 @@ describe('CTTCM-146', () => {
     browser.pause(2000);
     header.setForeseeValue();
     header.clickForeseeSetBtn();
-    header.clickForeseeReturnBtn();
-    browser.pause(4000);   
+    header.clickForeseeReturnBtn();   
   })
   it('Pre-conditions', () =>{
     header.clickMensLink();
